@@ -130,6 +130,20 @@ export const CustomRender = () => (
   </section>
 );
 
+export const menuPortal = () => (
+    <section>
+        <StoryStateRow>
+            <StoryStateColumn title="With menu portaling and extraStyles" centerize>
+                <Dropdown className="dropdown-story"
+                          options={mockColorOptions}
+                          menuPortalTarget={document.body}
+                          extraStyles={styles => ({ ...styles, menuPortal: base => ({ ...base, zIndex: 9999 }) })}
+                />
+            </StoryStateColumn>
+        </StoryStateRow>
+    </section>
+);
+
 export const sizes = () => (
   <section>
     <StoryStateRow>
